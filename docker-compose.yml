@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  web:
+    build: ./docker
+    image: anukis
+    ports:
+      - 80
+      - 443
+    environment:
+      - VIRTUAL_HOST=${HOSTNAME}
+    container_name: anukis
+    volumes:
+      - ./laravel:/var/www/
+    networks:
+       - routernetwork
+
+
+networks:
+ routernetwork:
+    external:
+       name: router_routernetwork
+
+
+
+
