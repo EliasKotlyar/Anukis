@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GrahamCampbell\Bitbucket\Facades\Bitbucket;
 
 class Packages extends Controller
 {
-    public function downloadPackage(){
-
-    }
-    public function getLinks()
+    public function downloadPackage()
     {
 
+
+    }
+
+    public function getLinks()
+    {
 
 
     }

@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 
 Route::get('/packages.json', 'Packages@listJson');
+Route::get('/download', 'Packages@downloadPackage');
