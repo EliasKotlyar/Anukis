@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Package;
 use Illuminate\Http\Request;
 use GrahamCampbell\Bitbucket\Facades\Bitbucket;
 
@@ -15,6 +16,12 @@ class Packages extends Controller
 
     public function getLinks()
     {
+        ;
+        $retArray = array();
+        foreach (Package::all() as $entry) {
+            $retArray[$entry->composername] = $entry->url;
+        }
+        return $retArray;
 
 
     }
